@@ -21,7 +21,7 @@ public class Funciones {
     {
         if (n == 0) {
             return 1;
-            
+
         } else {
             return n * factorial(n - 1);
         }
@@ -57,33 +57,33 @@ public class Funciones {
     }
 
     // Ejercicio 6 desviación típica de una lista 
-    public static double desviacionTipica(ArrayList<Integer> lista) 
+    public static double desviacionT(ArrayList<Integer> lista) 
     {
         double media = mediaAritm(lista);
-        return Math.sqrt(desviacionTipicaRecursiva(lista, media) / lista.size());
+        return Math.sqrt(desviacionT(lista, media) / lista.size());
     }
 
-    private static double desviacionTipicaRecursiva(ArrayList<Integer> lista, double media) {
+    private static double desviacionT(ArrayList<Integer> lista, double media) {
         if (lista.isEmpty()) {
             return 0;
 
         } else {
-            double diferenciaCuadrado = Math.pow(lista.get(0) - media, 2);
-            return diferenciaCuadrado + desviacionTipicaRecursiva(new ArrayList<>(lista.subList(1, lista.size())), media);
+            double difCuadrado = Math.pow(lista.get(0) - media, 2);
+            return difCuadrado + desviacionT(new ArrayList<>(lista.subList(1, lista.size())), media);
         }
     }
 
     // Ejercicio 7 La suma de los primeros números pares hasta n asumiendo n ≥ 2 
-    public static int sumaPares(int n) 
+    public static int sumaPar(int n) 
     {
         if (n == 2) {
             return 2;
 
         } else if (n % 2 == 0) {
-            return n + sumaPares(n - 2);
+            return n + sumaPar(n - 2);
         } else {
 
-            return sumaPares(n - 1);
+            return sumaPar(n - 1);
         }
     }
 

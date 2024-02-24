@@ -30,8 +30,8 @@ public class Principal{
         System.out.println("3. Potencia: " + Funciones.potencia(2, 3));
         System.out.println("4. Suma de lista: " + Funciones.sumaLista(lista1));
         System.out.println("5. Media: " + Funciones.mediaAritm(listaP));
-        System.out.println("6. Desviación típica: " + Funciones.desviacionTipica(lista2));
-        System.out.println("7. Suma de pares: " + Funciones.sumaPares(9));
+        System.out.println("6. Desviación típica: " + Funciones.desviacionT(lista2));
+        System.out.println("7. Suma de pares: " + Funciones.sumaPar(9));
         System.out.println("8. Suma par lista " + Funciones.sumaParLista(lista2));
 
 
